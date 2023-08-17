@@ -1,0 +1,132 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: aliceblue;
+}
+.btn {
+    background: #4dffd3 !important;
+    border: none;
+    height: 31px;
+    width: 55px;
+    margin: 2px;
+    border-radius: 5px;
+}
+.btn:hover{
+    height: 33px;
+    width: 57px;
+    font-size: 16px;
+    border-bottom: 1px solid black;
+    transition: .3s;
+    color: rgb(0, 0, 0);
+    padding: 2px;
+}
+li {
+    list-style: none;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 7px;
+    cursor: pointer;
+    font-size: 17px;
+    font-family: cursive;
+    position: relative;
+}
+
+li::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: white;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+}
+
+li:hover::after {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+ul {
+    display: flex;
+    float: right;
+    margin: 8px;
+    gap: 14px;
+}
+.main_head {
+    position: sticky;
+    background: linear-gradient(#183153, #4b6591);
+    height: 55px;
+    margin: 0;
+    top: 0;
+    z-index: 9999;
+    width: 100%;
+}
+.logo_head{
+    float: left;
+    padding: 5px 6px 6px 21px;
+    display: flex;
+}
+.logo_image{
+    height: 40px;
+    background: transparent;
+    width: 40px;
+    border-radius: 46%;
+    
+}
+.logo_text {
+    background: transparent;
+    margin: 0px 14px;
+    color: rgb(255, 255, 255);
+    font-family: cursive;
+    font-size: 27px;
+}
+.hero-container {
+    background-image: url('../assets/imag/istockphoto-1370772148-612x612.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px); /* Adjust the blur amount as needed */
+}
+@keyframes myAnimation {
+    0% {
+        background: transparent;
+        transform: rotate(0deg);
+    }
+    25% {
+        background: transparent;
+        transform: rotate(3deg);
+    }
+    50% {
+        background: transparent;
+        transform: rotate(0deg);
+    }
+    75% {
+        background: transparent;
+        transform: rotate(-3deg);
+    }
+    100% {
+        background: transparent;
+        transform: rotate(0deg);
+    }
+}
+
+.manimage {
+    background: transparent;
+    height: 491px;
+    animation-name: myAnimation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+
+.centerbody {
+    padding: 21px;
+}
+.centerimagsec{
+    display: flex;
+    justify-content: right;
+    margin-right: 94px;
+}
